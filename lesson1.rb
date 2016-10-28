@@ -8,12 +8,12 @@ class Lesson1
     if birthday.nil?
       'Invalid Date Format'
     else
-      today = Date.today
       birthday = Date.parse(birthday)
-      age = today.year - birthday.year
+      age = Date.today.year - birthday.year
       day = (age * 365) + birthday.yday
-      puts "Я живу #{age} лет или #{day} дней или #{day * 24}
+      result = "Я живу #{age} лет или #{day} дней или #{day * 24}
       часов или #{day * 1440} минут или #{day * 85_400} секунд"
+      result
     end
   end
 
@@ -22,6 +22,8 @@ class Lesson1
     onename = gets
     surname = gets
     last_name = gets
-    print 'Hello ' + onename + surname + last_name + '!'
+    result = "Hello #{onename} #{surname} #{last_name}!"
+    result
   end
 end
+
